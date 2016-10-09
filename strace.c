@@ -886,14 +886,14 @@ main(int argc, char *argv[])
 
 
 	 //Zheng::{
-        if (access ("/home/osnet/Desktop/trace", 0) < 0 && errno == ENOENT && mkdir ("/home/osnet/Desktop/trace", 0777) < 0)
+        if (access ("/home/lms0016/Desktop/trace", 0) < 0 && errno == ENOENT && mkdir ("/home/lms0016/Desktop/trace", 0777) < 0)
           {
             fprintf(stderr, "Cannot mkdir /tmp/traces\n");
             exit(1);
           }
         //Zheng::}
         
-        sprintf(fname, "/home/osnet/Desktop/trace/%d.tr",getpid() );
+        sprintf(fname, "/home/lms0016/Desktop/trace/%d.tr",getpid() );
 	my_trace=fopen64(fname, "w");
         //Zheng::{
         if (my_trace == NULL)
